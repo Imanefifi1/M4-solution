@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
+</head>
+<body>
+    <h1>Greetings</h1>
+    <!-- Include script tags for the external libraries -->
+    <script src="lib1.js"></script>
+    <script src="lib2.js"></script>
+    <script>
+        // Assume the two libraries are named lib1 and lib2
+        // Define the printHello and printGoodbye functions if they are not provided by the libraries
+        function printHello(name) {
+            console.log("Hello " + name);
+        }
+
+        function printGoodbye(name) {
+            console.log("Goodbye " + name);
+        }
+
+        // Sample array of names
+        const names = ["John", "Jane", "Michael", "Jessica"];
+
+        // Loop over the array of names
+        names.forEach(name => {
+            // Check if the name starts with 'j' or 'J'
+            if (name.charAt(0).toLowerCase() === 'j') {
+                lib2.printGoodbye(name);
+            } else {
+                lib1.printHello(name);
+            }
+        });
+    </script>
+</body>
+</html>
